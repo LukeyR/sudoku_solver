@@ -2,7 +2,7 @@ import math
 import copy
 import numpy as np
 
-difficulty = "easy"
+difficulty = "hard"
 sudoku_index = 7
 
 # Load sudokus
@@ -445,7 +445,6 @@ def sudoku_solver(board):
     # YOUR CODE HERE
     s = SudokuSolver(board)
     s.setup()
-    print(s.possible_values)
     if s.is_invalid():
         return s.impossible
     solved_sudoku = depth_first_search(s)
